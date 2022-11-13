@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">  
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1a48924413.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+    <nav class="navigation container">
+      <center>
+        <br>
+        <br>
+        <div class="nav-brand">English Dictionary</div>
+
+      </center>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link" href="./dictionary.html">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="./about.html">About</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="./contribute.html">Contribute</a>
+        </li>
+        <li class="list-item-inline">
+          <span id="toggleknop" onclick="changeTheme()"><i class="fas fa-moon" id="zon"
+                  style="color:#737eac;"></i></span>
+      </li>
+      </ul>
+    </nav>
+    <form action="handler.php" method="POST">
+    <div class="container container-center">
+      <header class="dict">
+        <img class="dict-img" src="./dictionary.jpg" />
+        <h1 class="dict-heading">Dictionary <span class="heading-inverted"></span></h1>
+      </header>
+          <div class="container container-center"> 
+            <div class="justify">
+              <textarea id="input-translate" placeholder="Enter text"></textarea>
+            </div>
+            <div id="output-translate">Meaning in Franch</div>
+            <div id="franch">Mening in Spanish</div>
+            <button type="button"  id="btn-translate">Translate</button>
+          </div>  
+    </div>
+
+    <footer class="footer">
+      <ul class="links list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="./feedback.html">
+              Feedback
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</form>
+</html>
