@@ -1,14 +1,15 @@
 :root {
-    --primary-color: #3c916ea8;
+    --primary-color: #65946d;
     --secondary-color: #BFDBFE;
-    --navbar-color: #3c916ea8;
+    --navbar-color: #65946d;
     --off-white: #F3F4F6;
 }
 
 html,
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    padding: 1rem;
+    margin: 1rem 1rem;
   }
   
   html {
@@ -56,8 +57,8 @@ body {
 body {
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 1rem;
+    margin: 1rem 1rem;
 
 }
 
@@ -65,6 +66,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     position: relative;
+    padding: 1rem;
+    margin: 1rem 1rem;
 }
 ul {
   list-style-type: none;
