@@ -7,23 +7,23 @@ html, body {
 line{
   stroke:red;
 }
-head {
-    list-style-type: none;
-    margin: 10;
-    padding: 0;
-    overflow: hidden;
-    background-color: #31708E;
-}
-    
 
 ul {
     list-style-type: none;
     margin: 10;
     padding: 0;
     overflow: hidden;
-    background-color: #F7F9FB;
+    background-color: #31708E;
 }
+.first-ul {
+  list-style: none;
+  padding: 0px;
+  margin: 10px;
+  font-family: arial;
+  color: 'black';
+  background-color: #F7F9FB;
 
+}
 li {
     float: left;
     display: block;
@@ -32,4 +32,3 @@ li {
     padding: 5px 10px;
     text-decoration: none;
 }
-
