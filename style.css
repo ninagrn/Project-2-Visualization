@@ -10,7 +10,7 @@ line{
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 10;
     padding: 0;
     overflow: hidden;
     background-color: #31708E;
@@ -20,7 +20,8 @@ ul {
   padding: 0px;
   margin: 10px;
   font-family: arial;
-  color: #687864;
+  color: 'black';
+  background-color: #F7F9FB;
 
 }
 li {
