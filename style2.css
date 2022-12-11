@@ -66,23 +66,13 @@ body {
     margin: 0px;
     position: relative;
 }
-
-/* dark mode */
-
-.dark-theme {
-    color: white;
-    background-color: #1F2937;
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 10px;
+  font-family: arial;
+  color: 'black';
 }
-
-.dark-theme textarea {
-    background-color: #1F2937;
-    color: white;
-}
-
-.dark-theme .link-primary {
-    color: white;
-}
-
 
 
 .justify {
