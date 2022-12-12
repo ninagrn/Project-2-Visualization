@@ -1,83 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<ul>
-			
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<script src= "https://d3js.org/d3.v4.min.js"> </script>
-			<script src="https://d3js.org/queue.v1.min.js"></script>
-			<script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script>
-			<link rel="stylesheet" type="text/css" href="style.css" />
-			<i> <p style = "text-align:center;"> <font size="12" color= 'white' face="monospace">Project 2</font></p></i>
-		</ul>	
-	</head>
-	<body>
-		<ul>
-     			<li> <button type="button" class ="button" onclick = "window.location.href = 'index.html';">Main Page</button></li>
-			<li> <button type="button" class ="button" onclick = "window.location.href = 'plots.html';">Analysis</button></li> 
-      			<li> <button type="button" class ="button" onclick = "window.location.href = 'https://github.com/ninagrn/ninagrn.github.io';">Code References </button></li>
-			<li> <button type="button" class ="button" onclick = "window.location.href = 'https://www.loom.com/share/2f52db6d20f542fc8eef7371a0934d9e';"> Loom Presentation </button></li>
-			<li> <button type="button" class ="button" onclick = "window.location.href = 'https://github.com/ninagrn/ninagrn.github.io/blob/main/README.md';">Documentation </button></li>
-		</ul>
-	<br>
-	<br>
-	<br>
-	          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:floralwhite;">
-             <header class="w3-container" style="background-color:blanchedalmond;">
+  <head>
+    <meta charset="utf-8">  
+    <title>Project 2</title>
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1a48924413.js" crossorigin="anonymous"></script>
+    <script src= "https://d3js.org/d3.v4.min.js"> </script>
+		<script src="https://d3js.org/queue.v1.min.js"></script>
+		<script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script>
+
+  </head>
+  <body>
+
+    <nav class="navigation container">
+      <center>
+        <br>
+        <br>
+        <div class="nav-brand">Project 2</div>
+
+      </center>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link link-active" href="./index.html">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="./plots.html">Graph Information</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="./analysis.html">Documentation/Analysis</a>
+        </li>
+          <li class="list-item-inline">
+          <a class="link link-active" href="https://www.loom.com/share/2f52db6d20f542fc8eef7371a0934d9e">Presentation</a>
+        </li>
+        
+        
+         <li class="list-item-inline">
+          <a class="link link-active" href="https://github.com/ninagrn/ninagrn.github.io">Github Page</a>
+        </li>
+
+      </ul>
+    </nav>
+    <br>
+    <br>
+	          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:#bfd6c3;">
+             <header class="w3-container" style="background-color:#65946d">
+             <h4 style='color: white;'>World Map</h4>
+                 </header>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+				The world map shows the number of events (in this case hostage situation) across all the different countries. Furthermore,
+			 	the user has the option to interact with the map and click a country to select it. The viualization will then filter the datapoints for the selected country 
+			 	and the two plots below the world map, the sunburst chart as well as the stream chart will adapt to only showing the datapoints corresponding to the selected
+			 	country. 
+
+                   <br> <br>
+                   <img src="map.jpg"width="500" height="230"> <br><br>
+
+               <br> <br> </p>
+	  </div>
+	  
+    <br>
+    <br>
+
+	          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:#bfd6c3;">
+             <header class="w3-container" style="background-color:#65946d">
+             <h4 style='color: white;'>Sunburst</h4>
+                 </header>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+				The sunburst shows the distribution among the different target types with the following main categories:
+				Military/Police/Government, Civilians, Infrastructure, Terrorists, and Other. Each of them shows the distribution of different subtypes at the outer ring of the Sunburst.
+			 	The user can select one of the main categories on the inner circle to filter the data to one target type and adjust both the world map as well as the stream chart to only show
+			 	the datapoints corresponding to the target type. 
+                   <br> <br>
+                   <img src="sunburst.jpg"> <br><br>
+
+               <br> <br> </p>
+	  </div>
+	  
+    <br>
+    <br>
+	          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:#bfd6c3;">
+             <header class="w3-container" style="background-color:#65946d">
+             <h4 style='color: white;'>Stream Chart</h4>
+                 </header>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+				The stream chart shows the use of several types of weapons used over time categorized in three groups: Explosives& Incendiary, Guns, and others. The first two categories 
+				are shown on the positive y-Axis while ‘Other’ is shown on the negative y-Axis. The chart can be read similarly to a stacked bar chart where ‘Explosives& Incendiary’ is stacked
+				on top of ‘Guns.’ The user can browse over the chart to get more information about the different datapoints. The user can also click one of the weapon types to adjust the other
+				two charts by weapon type as well. 
+
+                   <br> <br>
+                   <img src="streamchart.jpg"width="500" height="230"> <br><br>
+
+               <br> <br> </p>
+	  </div>
+	  
+          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:#bfd6c3;">
+             <header class="w3-container" style="#65946d;">
              <h4>Design Process</h4>
                  </header>
-                 <p style="margin-left:9%; margin-right:10%; font-size:13px">
-                   After exploring the data, we observed that the dataset consists of information such as State and County of the jail, number of deaths from 2008-2019,
-                   reasons behind those deaths, average number of inmates in the jail in a given year, demographic information of the dead inmates such as  age, race and gender.
-                   We have also observed that most of the dataset contains null values and to avoid irregularities we have to filter those null values.
-                   Since we have county level information, we thought that the best way to represent each of these counties on a single chart is to visualize them using a US map. Also, to make it easier to observe county level information, we want the map to be large enough so that it occupies a major part of our visualization.
-                   Next, we want to show the trends in number of deaths over the years, for which a timeline chart would be the best choice. Also, we want to analyze the causes of deaths and how these causes changed over the years.
-                   So, we have a cumulative timeline chart which shows the trends in total number of deaths as well as various causes of deaths. We also want to analyze the demographic information like the age group and race of the inmates to know which
-                   age groups have higher mortality rates, which races are most impacted etc. Depending on the data, we planned to divide these age values into four or five different groups and represent those using a pie chart. We dont want to overwhelm the user by having too many values on the pie chart.
-                   Hence we decided to group the ages. Similarly, we have 4 or 5 different race categories in the dataset and hence we decided to visualize these values using a pie chart.
-                   We also want to show the gender information for which we initially planned to have a pie chart for that as well. But since we already have two pie charts, we thought of grouping gender information with custody status information and display them using a grouped bar chart.
-                   Also, we didnt want the user to move to different pages or scroll down the page to view different visualizations and hence we planned to display all the graphs in a single page such that user can get a view of all the graphs at a glance. Based on the above points, we initially planned to have a layout as shown below.
+                 <p style="margin-left:9%; margin-right:10%; font-size:12px">
+			TO BE COMPLETED
                    <br> <br>
-                   <img src="design_1.jpg" alt="Initial Layout" width="500" height="300"> <br><br>
-
-                   After we started working on the layout, we observed that map along with its legend, occupied larger space than we expected. Reducing the size of the map further made it hard to observe county level information. Hence, we had to change the layout such that map occupies the left hand side of the page. On the right side, we had to adjust timeline chart, pie charts and grouped bar chart.
-                   Also, we noticed that it is still hard for the user to get the top 10 counties information based on number of deaths. Hence we wanted to include a bar chart to display top 10 counites information. After considering the above points,
-                   we experimented different layouts and finalized the below layout. <br> <br>
-
-                   <img src = "design_2.jpg" alt = "Final layout" width="500" height="333"> <br> <br>
-                   
-	           US Map for location of counties <br> <br>
-		   <img src = "US_Map.JPG" alt = "US Map" width="500" height="330"> <br> <br>
-		  
-                   Multi Line chart <br> <br>
-		   <img src = "Line_chart.JPG" alt = "Line Chart" width="500" height="330"> <br> <br>
-                  
-		   Pie charts <br> <br>
-	           <img src = "Pie_chart.JPG" alt = "Pie Chart" width="500" height="250"> <br> <br>
-                   
-		   Bar Charts <br> <br>
-		   <img src = "Bar_Charts.JPG" alt = "Bar Charts" width="500" height="250"> <br> <br>
-                  
-			 
-			 
-                   We planned to show year wise data as well. Hence we have designed all these graphs in such a way that all the charts interacts with the timeline chart i.e, when user selects a particular year on the timeline chart, all the charts will be updated accordingly.
+                   <img src="designp2.jpg" width="500" height="300"> <br><br>
 
 
                <br> <br> </p>
            </div>
-					
+	  <br>
+	  <br>
+	  <br>
+          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:#bfd6c3;">
+             <header class="w3-container" style="#65946d;">
+             <h4>Data and data Preprocessing</h4>
+                 </header>
+                 <p style="margin-left:9%; margin-right:10%; font-size:12px">
+			To support visualization and latency, we decided to enhance the length and breadth of the data. The process includes uploading a flat file to Microsoft SQL server and working the data from that point. Logically columns were reduced to fit our scope of study and important field that will help answer the initial questions. 
+			Data processing includes converting date field and number field to significant digits. Country names were standardized to fit the current nomenclature and international boundaries. Flags (-99) available within the data set were converted to Null. Multiple flags to support visualization and capture purpose or outcome of the event. 
+			Total hostage and total perp had to be adjusted in some cases where the total was less than the sum of parts, in which case the total was re-assigned the sum of its parts. For example, if there were 24 hostages but 25 hostages were killed, the total hostage count would be changed to 25.  Regions are assumed to be culturally 
+			and politically more similar to each other than to countries outside their region. Some regions were aggregated (East Asia and South Asia were combined into Asia) due to low variance demonstrating they were essentially from the same group.  Some countries and regions were excluded entirely due to these events being so rare 
+			that it did not warrant consideration within the limited space of a dashboard. For example, we dropped Oceania, a region including Australia, New Zealand, and a few other island nations. The entire region only had a couple hostage events, so it was excluded. Similarly, Qatar had a single incident where the one hostage was rescued, and one terrorist was captured. This single event causes a visually significant change in hostage rescue to perpetrator capture scatterplot. Tableau did not validate a few country names and the latitude and longitude provided in the data set were exact location. For this study we did not choose to keep that granularity of the event to infer any internal geographic tensions. Country names were corrected or replaced with current day names for Tableau to recognize current boundaries. Country population data additionally was inserted as a denominator to the calculated fields in tableau. 
+ 
+		  <h6>Data Grouping</h6> 
+		  	<b>Weapons Type:</b> 
+			- Explosive & Incendiary (includes Explosive, incendiary) 
+			- Guns (Fake Weapons, Firearms) 
+			- Other (Chemical, Melee, Sabotage Equipment, Vehicle, Unknown and other) 
+		  
+			<b>Target Type:</b> 
+			- Civilians (Abortion related, Business, Educational Institution, Journalists & Media, Private Citizen & Property, Religious Figures/ Institutions, Tourists 
+			- Infrastructure (Airports & Aircrafts, Food or Water Supply, Telecommunication, Transportation, Utilities) 
+			- Military/ Police/ Government (Diplomatic, General, Military, Police) 
+			- Others (Maritime, NGO, Other, Unknown) 
+			- Terrorists (Terrorists/ Non-state Militia, Violent Political Party) 
 
+		  	<b>Limitation:</b>  
+			- Population used is not normalized while using in calculated field for the year 1997- 2020 
+			- Current data may not be the true representation of the original dataset. Subset data is used to create preliminary inference. 
+			- Legacy issues: Since the data set was updated incrementally, new columns were added through the year causing the data fields to be redundant  
+
+
+               <br> <br> </p>
+           </div>
+	  
+
+
+    <footer class="footer">
+      <ul>
+        <i> <p style = "text-align:center;"> <font size="5" color= 'white' face="monospace">Visualization Designed By Brandon Downer,Ruiston Dsouza, Nick Larkin, and Nina Groene</font></p></i>
+
+      </ul>
+    </footer>
+    <script src="app.js"></script>
   </body>
-
-	<footer>
-		<ul>
-			
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<script src= "https://d3js.org/d3.v4.min.js"> </script>
-			<link rel="stylesheet" type="text/css" href="style.css" />
-			<i> <p style = "text-align:right;"> <font size="1o" color= #F7882F face="monospace">Visualization Designed By Brandn Downer,Ruiston Dsouza, Nick Larkin, and Nina Groene</font></p></i>
-		</ul>
-</footer>
+</html>
