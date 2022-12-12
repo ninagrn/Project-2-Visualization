@@ -41,24 +41,7 @@
 
       </ul>
     </nav>
-    <br>
-    <br>
-	          <div class="w3-card-4" style="width:100%;  justify-content:center;  background-color:#bfd6c3;">
-             <header class="w3-container" style="background-color:#65946d">
-             <h4 style='color: white;'>World Map</h4>
-                 </header>
-                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
-				The world map shows the number of events (in this case hostage situation) across all the different countries. Furthermore,
-			 	the user has the option to interact with the map and click a country to select it. The viualization will then filter the datapoints for the selected country 
-			 	and the two plots below the world map, the sunburst chart as well as the stream chart will adapt to only showing the datapoints corresponding to the selected
-			 	country. 
-
-                   <br> <br>
-                   <img src="map.jpg"width="500" height="230"> <br><br>
-
-               <br> <br> </p>
-	  </div>
-	  
+  
     <br>
     <br>
 
@@ -80,35 +63,40 @@
              <header class="w3-container" style="background-color:#65946d">
              <h4 style='color: white;'>Data and Data Preprocessing</h4>
                  </header>
-                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+                 <p style="margin-left:10%; margin-right:10%; font-size:13px">
 			To support visualization and latency, we decided to enhance the length and breadth of the data. The process includes uploading a flat file to Microsoft SQL server and working the data from that point. Logically columns were reduced to fit our scope of study and important field that will help answer the initial questions. 
 			Data processing includes converting date field and number field to significant digits. Country names were standardized to fit the current nomenclature and international boundaries. Flags (-99) available within the data set were converted to Null. Multiple flags to support visualization and capture purpose or outcome of the event. 
 			Total hostage and total perp had to be adjusted in some cases where the total was less than the sum of parts, in which case the total was re-assigned the sum of its parts. For example, if there were 24 hostages but 25 hostages were killed, the total hostage count would be changed to 25.  Regions are assumed to be culturally 
 			and politically more similar to each other than to countries outside their region. Some regions were aggregated (East Asia and South Asia were combined into Asia) due to low variance demonstrating they were essentially from the same group.  Some countries and regions were excluded entirely due to these events being so rare 
 			that it did not warrant consideration within the limited space of a dashboard. For example, we dropped Oceania, a region including Australia, New Zealand, and a few other island nations. The entire region only had a couple hostage events, so it was excluded. Similarly, Qatar had a single incident where the one hostage was rescued, and one terrorist was captured. This single event causes a visually significant change in hostage rescue to perpetrator capture scatterplot. Tableau did not validate a few country names and the latitude and longitude provided in the data set were exact location. For this study we did not choose to keep that granularity of the event to infer any internal geographic tensions. Country names were corrected or replaced with current day names for Tableau to recognize current boundaries. Country population data additionally was inserted as a denominator to the calculated fields in tableau. 
- 
+ 			 <br>
+			
 
 		  	<b>Weapons Type:</b> 
-			- Explosive & Incendiary (includes Explosive, incendiary) 
-			- Guns (Fake Weapons, Firearms) 
-			- Other (Chemical, Melee, Sabotage Equipment, Vehicle, Unknown and other)
+			 <br>
+			 
+			- Explosive & Incendiary (includes Explosive, incendiary) <br>
+			- Guns (Fake Weapons, Firearms) <br>
+			- Other (Chemical, Melee, Sabotage Equipment, Vehicle, Unknown and other)<br>
 			 <br>
 			 <br>
 			 
 		  
 			<b>Target Type:</b> 
-			- Civilians (Abortion related, Business, Educational Institution, Journalists & Media, Private Citizen & Property, Religious Figures/ Institutions, Tourists 
-			- Infrastructure (Airports & Aircrafts, Food or Water Supply, Telecommunication, Transportation, Utilities) 
-			- Military/ Police/ Government (Diplomatic, General, Military, Police) 
-			- Others (Maritime, NGO, Other, Unknown) 
+			 <br>
+			- Civilians (Abortion related, Business, Educational Institution, Journalists & Media, Private Citizen & Property, Religious Figures/ Institutions, Tourists <br>
+			- Infrastructure (Airports & Aircrafts, Food or Water Supply, Telecommunication, Transportation, Utilities) <br>
+			- Military/ Police/ Government (Diplomatic, General, Military, Police) <b>
+			- Others (Maritime, NGO, Other, Unknown) <br>
 			- Terrorists (Terrorists/ Non-state Militia, Violent Political Party) 
 			 <br>
 			 <br>
 
 		  	<b>Limitation:</b>  
-			- Population used is not normalized while using in calculated field for the year 1997- 2020 
-			- Current data may not be the true representation of the original dataset. Subset data is used to create preliminary inference. 
-			- Legacy issues: Since the data set was updated incrementally, new columns were added through the year causing the data fields to be redundant  
+			 <br>
+			- Population used is not normalized while using in calculated field for the year 1997- 2020 <br>
+			- Current data may not be the true representation of the original dataset. Subset data is used to create preliminary inference. <br>
+			- Legacy issues: Since the data set was updated incrementally, new columns were added through the year causing the data fields to be redundant  <br>
 
 
                <br> <br> </p>
