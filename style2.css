@@ -98,6 +98,8 @@ ul {
 .navigation .nav-brand {
     font-weight: bolder;
     color: white;
+    font-style: monospace;
+    font-size: 20px;
 }
 
 .navigation .link {
