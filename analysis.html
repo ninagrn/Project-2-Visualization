@@ -66,11 +66,73 @@
              <h4 style='color: white;'>Design Process</h4>
                  </header>
                  <p style="margin-left:10%; margin-right:10%; font-size:12px">
-				TO BE COMPLETED
+			 <br>
+			 
+				When we first started the project, we planned on using the whole range of terrorism attacks. Therefore, we planned on showing the world map and have a heat map representing the number of countries in each country. We wanted to add filters for three different categories: Types of Targets, type of attacks, and type of perps. Additionally, we wanted to add a time line chart where each attack was documented on the time line. An outline of that can be observed in the image below. 
+			 	Additionally, we wanted the three main categories as well as the time line to act as a filter.
                    <br> <br>
-                   <img src="designp2.jpg"> <br><br>
+                   <img src="designp2.jpg"width = '500'height = '280'> <br><br>
 
                <br> <br> </p>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+			 <br>
+			 
+				First Implemntation of Idea:
+                   <br> <br>
+                   <img src="design1.jpg"width = '500'height = '280'> <br><br>
+
+               <br> <br> </p>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+			 <br>
+			 
+				The first implementation was a simple world map where each country was color coded according to the number of events. We then added international hijackings as lines connected to point those events out. However, after further testing and talking to others, we decided that this implementation is not easily readable or interpretable and therefore 
+			 	decided to take a different route. We filtered all the events for only hostage event as described in the Section ‘Data and Data Preprocessing’ and thought about new ways to visualize the data. We wanted to keep the world map as the main graph and thought about different plots that would add value to the visualization. After further deliberation, we decided
+			 	that we wanted to have a timeline plot for the weapon use over time and a scatter plot for the Target types.We decided to use a stream chart for the weapon types over time plot, but we had issues to make the scatterplot meaningful. We decided to add a simple bar chart for ransom demanded versus ransom paid to add more information. At this point we started to 
+			 	link the different graphs together such that we could analyze different regions and countries better and also be able to compare them.A first implementation of that idea can be seen in the picture below.
+
+                   <br> <br>
+                   <img src="design2.jpg"width = '500'height = '280'> <br><br>
+
+               <br> <br> </p>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+			 <br>
+			 
+				Since we struggled to come up with a scatter plot fir the target types, we decided to use a sunburst instead to show the distribution and proportion among the target types and their subcategories. At the same time, we wanted to focus on more than just the number of events, target types, and weapons used. Another interesting aspect that we wanted to focus on were
+			 	the people involved in the hostage situation: the hostages and the perpetuators. We decided to use two kind of visualizations for this purpose: butterfly graphs and scatterplots. The butterfly graphs were chosen because it shows data symmetric and is an ideal choice to compare two similar  distributions. We started with trying to compare perps to hostages but the
+			 	counts were drastically different for each so we went with two aspects of the same quantity (perps). Doctrinally, foreign fighters play by a very different set of rules than domestic fighters. So we looked at the number of foreign fighters per million people. Next, we tried to think of the next most interesting aspect of the nature of the perps. We decided to look 
+			 	at how many perps were involved in murdering their hostages. The variance from country was very interesting. These perp trends made me want to add GDP or some other economic measures to the analysis.We implemented the same idea twice with the difference that one butterfly graph shows the distribution per region and the second shows the top 5 country for a selected region.
+				Because the butterfly charts on the top of the dashboard offer analysis of the nature of the perps, we decided to do a similar but different deep dive on the nature of the terrorism response forces by region and country. That is why we used one scatterplot to consider at a two axis measure of the quality of the response forces. Given the data available, the best measure of 
+			 	response force success is how often they capture perps and rescue hostages. The countries in the upper right corner of the scatterplot are successful along both designated dimensions. The countries in the lower left are unsuccessful along both dimensions. All measures are normalized by dividing the counts per capita, then multiplying the resultant by 1,000,000. We chose
+			 	this number to scale the resultant because we wanted the actual value to be relevant to the user. Without multiplying by 1,000,000, the vast majority of the values are small fractions. Users have a hard time imagining a fraction of a person. The other scatterplot looks at the efficacy of ransoms. The y axis is the average difference between ransom demanded and ransom paid. 
+			 	The x axis is the average number of hostages released by the perpetrators. What we find is that, in general, the more the perps were paid, i.e. the lower the difference between ransom demanded and paid, the more hostages were released. That is why we see patterns of clusters of markers along the x axis. The implementation can be shown below	
+
+                   <br> <br>
+                   <img src="design3.jpg"width = '500'height = '280'> <br><br>
+
+               <br> <br> </p>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+			 <br>
+			 
+				Once we had both dashboards completed, we started testing and came across an issue. When selecting certain countries with little or no data for the weapon types, the stream chart was hard to read which might lead to more confusion rather than giving insights. The image below shows an example of such issue when selecting the country Germany. To erase this issue,
+			 	we switched plans and went with a plot that shows data in a similar way stacked way as the stream chart does and went with a simpler version of that: a stacked bar plot.
+
+
+                   <br> <br>
+                   <img src="design4.jpg"width = '500'height = '280'> <br><br>
+
+               <br> <br> </p>
+               <br> <br> </p>
+                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
+			 <br>
+			 
+				At this point, we were satisfied with the visualization at hand. We went with two slides for the visualization, the first page being the world map with the stacked bar plot and the sunburst, and the butterfly and scatterplots on the second slide. After this, we focussed on optimizing the visualizations. We implemented a refresh button on the top center and used 
+			 	optimizers to check for accessibility for people with any kind of vision disability. We also implemented more information in the tool tips such as a zoom of the country browsed over on the world map, the numerical percentages in the sunburst tooltip, and also added a tooltip for the bar chart.
+
+
+                   <br> <br>
+
+               <br> <br> </p>
+			  
 	  </div>
 	  
     <br>
@@ -168,7 +230,7 @@
        <p style="margin-left:13%; margin-right:10%; justify-content:center; font-size:13px">
 	  To be answered
 
-	</p>
+	<br><br></p>
 
  <br><br>
 	  <br>
