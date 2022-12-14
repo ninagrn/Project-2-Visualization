@@ -82,7 +82,7 @@
 				Before we started with the first visualization, we used Tableau Prep to clean the data further and gain a better understanding of the data at hand. A screenshot of the interface used can be seen below.<br>
                    <br> <br>
 			  <div align=center>
-                   <img src="dataprep.jpeg"width = '500'height = '310'> <br><br>
+                   <img src="dataprep.jpeg"width = '500'height = auto> <br><br>
 				  </div>
 
                <br> <br> </p>
@@ -92,7 +92,7 @@
 				First Implementation of Idea:
                    <br> <br>
 			 <div align=center>
-                   <img src="design1.jpg"width = '500'height = '310'> <br><br>
+                   <img src="design1.jpg"width = '500'height = auto> <br><br>
 				 </div>
 
                <br> <br> </p>
@@ -106,7 +106,7 @@
 
                    <br> <br>
 			 <div align=center>
-                   <img src="design2.jpg"width = '500'height = '310'> <br><br>
+                   <img src="design2.jpg"width = '500'height = auto> <br><br>
 				 </div>
 
                <br> <br> </p>
@@ -123,14 +123,15 @@
 			 	and the second shows the top 5 country for a selected region.
 				Because the butterfly charts on the top of the dashboard offer analysis of the nature of the perps, we decided to do a similar but different deep dive on the nature of the terrorism response forces by region and country. That is why we
 			 	used one scatterplot to consider at a two axis measure of the quality of the response forces. Given the data available, the best measure of response force success is how often they capture perps and rescue hostages. The countries in the upper
-			 	right corner of the scatterplot are successful along both designated dimensions. The countries in the lower left are unsuccessful along both dimensions. All measures are normalized by dividing the counts per capita, then multiplying 
+			 	right corner of the scatterplot are successful along both designated dimensions. The countries in the lower left are unsuccessful along both dimensions.<br><br>
+			 	All measures are normalized by dividing the counts per capita, then multiplying 
 			 	the resultant by 1,000,000. We chose this number to scale the resultant because we wanted the actual value to be relevant to the user. Without multiplying by 1,000,000, the vast majority of the values are small fractions. Users have a
 			 	hard time imagining a fraction of a person. The other scatterplot looks at the efficacy of ransoms. The y axis is the average difference between ransom demanded and ransom paid.
 			 	The x axis is the average number of hostages released by the perpetrators. What we find is that, in general, the more the perps were paid, i.e. the lower the difference between ransom demanded and paid, the more hostages were released. That is why we see patterns of clusters of markers along the x axis. The implementation can be shown below.<br>	
 
                    <br> <br>
 			 <div align=center>
-                   <img src="design3.jpg"width = '500'height = '310'> <br><br>
+                   <img src="design3.jpg"width = '500'height = auto> <br><br>
 				 </div>
 
                <br> <br> </p>
@@ -143,7 +144,7 @@
 
                    <br> <br>
 			 <div align=center>
-                   <img src="design4.jpg"width = '500'height = '310'> <br><br>
+                   <img src="design4.jpg"width = '500'height = auto> <br><br>
 				 </div>
 
                <br> <br> </p>
@@ -166,7 +167,7 @@
              <header class="w3-container" style="background-color:#65946d">
              <h4 style='color: white;'>Data and Data Preprocessing</h4>
                  </header>
-                 <p style="margin-left:10%; margin-right:10%; font-size:13px">
+                 <p style="margin-left:12%; margin-right:12%; font-size:13px">
 			To support visualization and latency, we decided to enhance the length and breadth of the data. The process includes uploading a flat file to Microsoft SQL server and working the data from that point. Logically columns were reduced to fit our scope of study and important field that will help answer the initial questions. 
 			Data processing includes converting date field and number field to significant digits.
 			<br>
@@ -177,7 +178,8 @@
 			Some countries and regions were excluded entirely due to these events being so rare 
 			that it did not warrant consideration within the limited space of a dashboard. For example, we dropped Oceania, a region including Australia, New Zealand, and a few other island nations. The entire region only had a couple hostage events, so it was excluded. Similarly, Qatar had a single incident where the one hostage was rescued, and one terrorist was captured. This single event causes a visually significant change in hostage rescue to perpetrator capture scatterplot. Tableau did not validate a few country names and the latitude and longitude provided in the data set were exact location. For this study we did not choose to keep that granularity of the event to infer any internal geographic tensions. Country names were corrected or replaced with current day names for Tableau to recognize current boundaries. Country population data additionally was inserted as a denominator to the calculated fields in tableau. 
  			 <br>
-			
+			<br>
+			 <br>
 
 		  	<b>Weapons Type:</b> <br>
 			 <br>
@@ -217,7 +219,7 @@
              <h4 style='color: white;'>Background Information</h4>
                  </header>
                  <p style="margin-left:10%; margin-right:10%; font-size:13px">
-				We scanned through the Historic Timeline to help our design decisions and finding. Our data is a subset of the original data all events may not be captured in the final visualization. Countries and year of few major events are mentioned below:<br>
+				We scanned through the Historic Timeline to help our design decisions and finding. Our data is a subset of the original data all events may not be captured in the final visualization. Countries and year of few major events are mentioned below:<br><br>
                    <b>2000 to 2001</b>  - Columbian Conflict between Revolutionary Armed Forces of Colombia (FARC), the National Liberation Army (ELN) and the Popular Liberation Army (EPL) <br>
                    <b>2003 to 2011</b> - Iraq War <br>
                    <b>2008</b> - Terrorists attack several sites in Mumbai, India; sieges end three days later with more than 170 dead and 300 wounded; surviving attacker says Lashkar-e-Tayyiba responsible. <br> 
@@ -238,8 +240,8 @@
      </header>
          <p style="margin-left:9%; margin-right:10%; justify-content:center; font-size:13px">
              The following section lists the questions and our observations from the visualizations- </p>
-       <h5 style="margin-left:10%; margin-right:10%;" >1. How were weapons used over time?</h5>
-	<p style="margin-left:13%; margin-right:10%; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >1. How were weapons used over time?</h5>
+	<p style="margin-left:15%; margin-right:12%; font-size:13px">
 
      				Weapons were summarized to logical bucketing for the simplicity of the visualization (refer data grouping) Spike in events seen post 2014. There is delta increase in use of weaponry type which explains the events following the major events during the period.<br><br>
 
@@ -257,7 +259,7 @@
 
                    		<br> <br>
 				    <div align=center>
-                  		<img src="1c.jpg"width = '500' height = '310'> <br><br>
+                  		<img src="1c.jpg"width = '500' height = auto> <br><br>
 		 </div>
 
                <br> <br> </p>
@@ -265,14 +267,17 @@
 	  
 <!-- Question 2-->
 	  
-       <h5 style="margin-left:10%; margin-right:10%;" >2. Is there a trend for the number of Attacks over time?</h5>
-       <p style="margin-left:13%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >2. Is there a trend for the number of Attacks over time?</h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	  The number of attacks increased post 2014. Which are mainly the Iraqi Civil war (beginning 2013), War in Northwest Pakistan (Operation Ghazi), Second Libyan Civil War, Boko Haram insurgency.<br> 
  
-		<b>2a. The increase in events post 2014 affect a specific target type or region?</b><br> 
+		<br>
+	       <b>2a. The increase in events post 2014 affect a specific target type or region?</b><br> 
 		Again, majority of the target type affected where civilian during the time frame 2014- 2018 spread out across the same geography – India, Iraq, Afghanistan. We need to note our data is a subset of hostages flag created based on the data.<br>  
 	<br> <br>
-        <img src="2a.jpg"width = '500' height = '310'> <br><br>
+	       <div align=center>
+        <img src="2a.jpg"width = '500' height = auto> <br><br>
+</div>
 		<b>2b. Is there a region prone where mliitary was a target type (military) - 2014 to 2018?</b><br>
 		Afghanistan, Iraq, Libya and Yemen are prone to more events targeting military in the area.<br>
 		Which region are prone where government was a target type(2014 to 2018)? : Afghanistan, Pakistan India, Libya, Nigeria, Yemen and Iraq.<br><br> 
@@ -282,8 +287,8 @@
 	  
 <!-- Question 3-->	  
 	  
-       <h5 style="margin-left:10%; margin-right:10%;" >3. Is there a relationship looking at the granularity of the events in the country view (tooltip)? </h5>
-       <p style="margin-left:13%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >3. Is there a relationship looking at the granularity of the events in the country view (tooltip)? </h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	 Looking at countries with dense events occurred. Below are few findings - <br>
 	Afghanistan is the country with most events in the timeline the data is captured. <br>
 	Iraq – The Civil War and Iraq war recorded many events during this time frame. Turkey that shares borders with Iraq see an overflow of event in the border region.<br> 
@@ -300,14 +305,14 @@
   <br>
 
 <!-- Question 4-->
-       <h5 style="margin-left:10%; margin-right:10%;" >4. Is there a region prone to a weapon type (Event >1000)?</h5>
-       <p style="margin-left:13%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >4. Is there a region prone to a weapon type (Event >1000)?</h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	  India the mix of weapon type is balanced used in the terrorist event. Afghanistan visually has more events use Explosive and Incendiary which confirms the multiple blast and bombing during the timeframe. Year 2014 shows the onset of the Iraqi civil war which confirms a spike in weaponry used and events in Iraq. In the year 1997 violence in Colombia accounted for the bulk of international terrorist incidents in Latin America. <br>
 	</p>
 <!-- Question 5-->
   <br>
-       <h5 style="margin-left:10%; margin-right:10%;" >5. Is there a region with significant high or low foreign perpetrators? </h5>
-       <p style="margin-left:13%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >5. Is there a region with significant high or low foreign perpetrators? </h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	  Across all the region, South Asia has the most foreign numbers, but also the most perpetrators overall. While the Middle East& North Africa, South America, and Central& East Asia all have high numbers for perpetrators overall, the proportion of foreign perpetrators is extremely low.<br> <br> 
 	<b>5a. Is there a country with significant high or low foreign perpetrators?</b><br> 
 	Namibia shows an enormous proportion of foreign perpetrators. Almost 99% of perpetrators are foreign. Macedonia and Malta show similar distributions as Namibia. Bhutan is another country that shows a high percentage of foreign perpetrators. 
@@ -315,8 +320,8 @@
   <br>
 <!-- Question 6-->
 	</p>
-       <h5 style="margin-left:10%; margin-right:10%;" >6.How likely is it for a perp to kill a hostage?</h5>
-       <p style="margin-left:13%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >6.How likely is it for a perp to kill a hostage?</h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	  <b>6a. Across regions?</b> <br>
 	South Asia has the most homicidal terrorists, but it is to consider that South Asia has the highest number of perpetrators overall as well. Proportion wise, around 30% of the South Asian perpetrators are also murderers. In comparison, nearly 50% of all perpetrators in the Middle East & North Africa are homicidal. Europe and North America show the lowest proportion of homicidal terrorists. <br><br>
  	<b>6b.Across countries?</b> <br>  
@@ -326,33 +331,34 @@
 		Ecuador has a high percentage of foreign perpetrators, but a small number of homicidal perpetrators. Other countries with a high foreign perpetrator rate such as Namibia, Kenya, and Macedonia, support that trend as well. Therefore, we can conclude that there are no indicators that foreign perpetrators increase the rate of homicidal terrorists.<br> 
 	<br> <br>
 		<div align=center>
-        <img src="63.jpg"width = '700' height = '250'> <br><br>
-			</div>
+        <img src="63.jpg"width = '650' height = auto> <br><br>
+</div>
 	<br><br></p>
 <!-- Question 7-->
 	</p>
-       <h5 style="margin-left:10%; margin-right:10%;" >7. Does paying the demanded ransom save hostage lives?</h5>
-       <p style="margin-left:12%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >7. Does paying the demanded ransom save hostage lives?</h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	   <b>7a. Are there any trends for certain regions and their countries? </b><br>
 	We can observe a common trend of paying the demanded ransom in the South Asian countries. However, most countries are not able to rescue more than 20% of the hostages' lives. A similar trend can be observed in the Middle East and North Africa. Even though most countries tend to pay the demanded ransom, the average hostage saved is around 30 percent. It seems that in both regions paying the ransom barely works to save the hostages. This trend can be seen in Sub-Saharan Africa as well.<br> 
 	Two countries in Central and East Asia show a different insight: both the Philippines and Malaysia paid on average 3 million less in ransom and were able to save nearly 50% of the hostages. Another interesting outlier is Greece: Even though they have an average of circa 30 million in unpaid ransom, they were able to rescue close to 80% of the hostages.<br> 
 	<br> <br>
 	       <div align=center>
-        <img src="71.jpg"width = '400' height = '240'> <br><br>
-		</div>
+		       img src="71.jpg" width = '400' height=auto> <br><br>
+</div>
+	
 	<b>7b. Does the number of events in the country have an influence?</b><br> 
 	While we couldn’t confirm any trends for certain, looking at the example images below, that countries with a high number of events seem to have a lower average rate of released hostages. <br>
 	<br> <br>
+
 		<div align=center>
-        <img src="72a.jpg"width = '400' height = '240'> <br><br>
-	<img src="72b.jpg"width = '400' height = '254'>
-		</div>
-     
+        <img src="72a.jpg"width = '400' height = auto> <br><br>
+	<img src="72b.jpg"width = '400' height = auto>
+</div>
 	<br><br></p>
 <!-- Question 8-->
 	</p>
-       <h5 style="margin-left:10%; margin-right:10%;" >8. Do countries take perpetrators in custody?</h5>
-       <p style="margin-left:15%; margin-right:10%; justify-content:center; font-size:13px">
+       <h5 style="margin-left:12%; margin-right:12%;" >8. Do countries take perpetrators in custody?</h5>
+       <p style="margin-left:15%; margin-right:12%; justify-content:center; font-size:13px">
 	  Overall, most countries do not take perpetrators into custody. However, this does not mean that no country attempts to. A possibility for this overall trend could be explained by considering that most countries also cannot rescue a high percentage of hostages even when the demanded ransom is paid. This could mean that for many perpetrators it is not just about the money or that negotiations of any kind seem to fail. <br><br> 
 	<b>8a. Does the number of events play a role in this?</b> <br>
 	There is no indication that the number of events play a huge role in this on a global scale. Looking only at European countries, however, it can be observed that the countries with a smaller number of events take more perpetrators into custody.  
@@ -377,8 +383,8 @@
              <header class="w3-container" style="background-color:#65946d">
              <h4 style='color: white;'>References and Contributions</h4>
                  </header>
-                 <p style="margin-left:10%; margin-right:10%; font-size:12px">
-				The referring documents can be found on our GitHub page.
+                 <p style="margin-left:12%; margin-right:12%; font-size:12px">
+				The referring documents can be found on our GitHub page.<br><br>
 
                <br> </p>
 	  </div>
